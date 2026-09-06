@@ -19,19 +19,18 @@ This framework was created to fill that gap — providing a shared language for 
 ## What's inside
 
 ### 9 Role Profiles
-Each with a dedicated competency map and must-have thresholds:
 
 | Role | Focus |
 |------|-------|
-| RL Engineer — Locomanipulation | Learning-based policies for combined loco+manip |
-| VLA Pre-Training Engineer | Foundation model pre-training for robotics |
+| RL Engineer — Locomanipulation | Learning-based policies for combined locomotion + manipulation |
+| VLA Engineer | Foundation model pre-training for robotics actions |
 | Senior RL Engineer (VLA) | RL + multimodal transformers + distributed training |
 | Simulation Engineer — Manipulation | Physics simulation environments for dexterous tasks |
-| Simulation & Control Engineer | Sim-driven hardware design + RL + control theory |
-| Staff Control Software Engineer | Production-grade real-time control systems |
+| Robotics Sim & Control Engineer | Sim-driven hardware design + RL + control theory |
+| Staff Control Engineer | Production-grade real-time control systems |
 | Teleoperation SW Engineer (VR) | Low-latency VR teleoperation systems |
-| Teleoperation Engineer (UX/Mappings) | Operator experience, control mappings, cognitive load |
-| Manipulation Capability Engineer | Post-training and fine-tuning for end-user tasks |
+| Teleoperation Engineer (UX / Mappings) | Operator experience, control mappings, cognitive load |
+| Manipulation Capability Engineer / Robotics Learning Engineer | Post-training and fine-tuning for end-user tasks |
 
 ### 10 Competency Domains · 48 Competencies
 
@@ -39,18 +38,16 @@ Each with a dedicated competency map and must-have thresholds:
 |--------|----------|
 | D1 · RL Core | Policy optimization, reward design, curriculum, imitation learning, distributed training |
 | D2 · Simulation | Isaac Lab, MuJoCo, URDF, GPU-parallel sim, domain randomization, physics setup |
-| D3 · Locomotion | Legged/humanoid robots, dynamic balance, kinematics & dynamics, whole-body control |
+| D3 · Locomotion | Legged / humanoid robots, dynamic balance, kinematics & dynamics, whole-body control |
 | D4 · Manipulation | Dexterous grasping, in-hand manipulation, deformable objects |
 | D5 · Locomanipulation | Combined loco+manip policies, multi-behavior learning |
 | D6 · Perception & VLA | VLA models, multimodal transformers, LLM/VLM pre-training, eval design |
-| D7 · Control Systems | MPC, impedance/force control, real-time architecture, safety-critical systems |
-| D8 · Software & HW | ROS2, C++, Python/PyTorch, real-time Linux, CI/CD |
+| D7 · Control Systems | MPC, impedance / force control, real-time architecture, safety-critical systems |
+| D8 · Software & HW | ROS2, C++, Python / PyTorch / JAX, real-time Linux, CI/CD |
 | D9 · Teleoperation | VR development, low-latency streaming, operator UX, HCI, data pipelines |
 | D10 · Research & Collab | Publications, experiment design, HW↔SW collaboration, technical leadership |
 
 ### Scoring System
-
-Each competency is rated 0–3:
 
 | Score | Level | Meaning |
 |-------|-------|---------|
@@ -68,7 +65,7 @@ Each competency is rated 0–3:
 ### For hiring teams
 - Use the competency matrix to build structured interview scorecards
 - Replace subjective gut-feel with role-specific must-have thresholds
-- Compare candidates on the same dimensions across geographies and interviewers
+- Compare candidates consistently across geographies and interviewers
 
 ### For candidates
 - Understand what robotics companies actually look for beyond keywords
@@ -76,8 +73,8 @@ Each competency is rated 0–3:
 - Prepare for technical interviews with domain-specific depth
 
 ### For educators and researchers
-- Map curricula against industry expectations
-- Identify where academia and industry expectations diverge
+- Map curricula against real industry expectations
+- Identify where academia and industry diverge
 - Understand the multidisciplinary nature of modern robotics roles
 
 ---
@@ -88,13 +85,13 @@ Each competency is rated 0–3:
 Standard skills taxonomies treat robotics as a subset of software. It isn't. The critical differentiator is integration ability — can this person make mechanical, electrical, and software systems work together reliably in the real world?
 
 **2. The rarest profiles**
-RL Loco-manipulation engineers (simultaneous locomotion + manipulation policy) represent fewer than 300 people globally with genuine hands-on experience. Standard ATS platforms cannot identify them.
+RL Locomanipulation engineers (simultaneous locomotion + manipulation policy) represent fewer than 300 people globally with genuine hands-on experience. Standard ATS platforms cannot identify them.
 
 **3. Sim-to-real is the real filter**
 Candidates who have only trained in simulation and never deployed on hardware consistently underperform expectations. This framework treats real-hardware deployment experience as must-have for all hardware-facing roles.
 
-**4. VLA roles are splitting**
-Two distinct profiles are emerging: engineers who pre-train foundation models (deep learning background, robotics optional) and engineers who fine-tune and deploy them (robotics-first, learning-aware). These require different hiring pipelines.
+**4. VLA roles are splitting into two distinct profiles**
+Engineers who pre-train foundation models (deep learning background, robotics optional) vs. engineers who fine-tune and deploy them (robotics-first, learning-aware). These require completely different hiring pipelines.
 
 **5. Teleoperation UX is an invisible gap**
 The intersection of robotics and human-computer interaction is where most companies struggle most. Cognitive load, control mappings, and operator fatigue are engineering problems — but no standard robotics taxonomy covers them.
@@ -106,7 +103,7 @@ The intersection of robotics and human-computer interaction is where most compan
 | File | Description |
 |------|-------------|
 | `README.md` | This document |
-| `competency_matrix_v4.csv` | Full competency matrix — 9 roles × 48 competencies |
+| `competency_matrix_final.csv` | Full matrix — 9 roles × 48 competencies with must-have markers |
 
 ---
 
@@ -117,7 +114,7 @@ This framework reflects one company's experience (humanoid robotics, London-base
 Contributions welcome:
 - Additional role profiles (field robotics, agricultural robotics, surgical robotics)
 - Regional calibration (US vs. EU vs. Asia-Pacific hiring norms)
-- Corrections to competency levels based on your hiring experience
+- Corrections based on your own hiring experience
 
 Open an issue or submit a pull request.
 
@@ -133,5 +130,5 @@ Built during the process of scaling a robotics team from 0 to 200 engineers acro
 
 ---
 
-*This framework is released as open source. Use it, adapt it, improve it.*
+*This framework is released as open source. Use it, adapt it, improve it.*  
 *If it helps your team hire better — that's the point.*
