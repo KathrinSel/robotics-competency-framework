@@ -2,17 +2,17 @@
 
 **An open competency standard for hiring engineers in humanoid and mobile robotics.**
 
-Built by a talent practitioner who conducted 200+ technical interviews across UK, US, and Canada — because no existing HR tool, ATS, or skills taxonomy was designed for this domain.
+Built by a talent practitioner who conducted 200+ technical interviews across UK, US, and Canada - because no existing HR tool, ATS, or skills taxonomy was designed for this domain.
 
 ---
 
 ## Why this exists
 
-Robotics sits at the intersection of mechanical engineering, embedded software, AI, and safety-critical systems. A qualified robotics engineer is not a software engineer with a broader stack — they are a genuinely multidisciplinary profile that standard hiring tools cannot evaluate.
+Robotics sits at the intersection of mechanical engineering, embedded software, AI, and safety-critical systems. A qualified robotics engineer is not a software engineer with a broader stack - they are a genuinely multidisciplinary profile that standard hiring tools cannot evaluate.
 
-Existing HR infrastructure was built for two scenarios: high-volume hiring (retail, logistics) or generic software engineering. Robotics fits neither. The result: companies either hire the wrong people slowly, or fail to hire at all.
+Existing HR infrastructure was built for two scenarios: highvolume hiring (retail, logistics) or generic software engineering. Robotics fits neither. The result: companies either hire the wrong people slowly, or fail to hire at all.
 
-This framework was created to fill that gap — providing a shared language for evaluating robotics talent across specialisations, seniority levels, and geographies.
+This framework was created to fill that gap - providing a shared language for evaluating robotics talent across specialisations, seniority levels, and geographies.
 
 ---
 
@@ -22,9 +22,9 @@ This framework was created to fill that gap — providing a shared language for 
 
 | Role | Focus |
 |------|-------|
-| RL Engineer — Locomanipulation | Learning-based policies for combined locomotion + manipulation |
+| Reinforcement Learning Engineer — Locomanipulation | Learning-based policies for combined locomotion + manipulation |
 | VLA Engineer | Foundation model pre-training for robotics actions |
-| Senior RL Engineer (VLA) | RL + multimodal transformers + distributed training |
+| Senior Reinforcement Learning Engineer (VLA) | RL + multimodal transformers + distributed training |
 | Simulation Engineer — Manipulation | Physics simulation environments for dexterous tasks |
 | Robotics Sim & Control Engineer | Sim-driven hardware design + RL + control theory |
 | Staff Control Engineer | Production-grade real-time control systems |
@@ -82,10 +82,10 @@ This framework was created to fill that gap — providing a shared language for 
 ## Key insights from 200+ interviews
 
 **1. Robotics ≠ software engineering**
-Standard skills taxonomies treat robotics as a subset of software. It isn't. The critical differentiator is integration ability — can this person make mechanical, electrical, and software systems work together reliably in the real world?
+Standard skills taxonomies treat robotics as a subset of software. It isn't. The critical differentiator is integration ability - can this person make mechanical, electrical, and software systems work together reliably in the real world?
 
 **2. The rarest profiles**
-RL Locomanipulation engineers (simultaneous locomotion + manipulation policy) represent fewer than 300 people globally with genuine hands-on experience. Standard ATS platforms cannot identify them.
+Reinforcement Learning Locomanipulation engineers (simultaneous locomotion + manipulation policy) represent fewer than 300 people globally with genuine hands-on experience. Standard ATS platforms cannot identify them.
 
 **3. Sim-to-real is the real filter**
 Candidates who have only trained in simulation and never deployed on hardware consistently underperform expectations. This framework treats real-hardware deployment experience as must-have for all hardware-facing roles.
@@ -103,13 +103,13 @@ The intersection of robotics and human-computer interaction is where most compan
 | File | Description |
 |------|-------------|
 | `README.md` | This document |
-| `competency_matrix_final.csv` | Full matrix — 9 roles × 48 competencies with must-have markers |
+| `competency_matrix_final.csv` | Full matrix - 9 roles × 48 competencies with must-have markers |
 
 ---
 
 ## Contributing
 
-This framework reflects one company's experience (humanoid robotics, London-based, 2023–2025). It is intentionally opinionated and based on real hiring data — not theoretical job architecture.
+This framework reflects one company's experience (humanoid robotics, London-based, 2023–2025). It is intentionally opinionated and based on real hiring data - not theoretical job architecture.
 
 Contributions welcome:
 - Additional role profiles (field robotics, agricultural robotics, surgical robotics)
@@ -122,11 +122,11 @@ Open an issue or submit a pull request.
 
 ## About
 
-Created by **Ekaterina Selezneva**, Head of Talent Acquisition at a humanoid robotics company (London, UK).
+Created by **Kathrin Selezneva**, Lead Talent Acquisition Manager at a humanoid robotics company (London, UK).
 
 Built during the process of scaling a robotics team from 0 to 200 engineers across UK, US, and Canada — after discovering that every existing tool failed to evaluate the profiles we needed.
 
-[LinkedIn](https://linkedin.com/in/your-profile) · [Contact](mailto:your@email.com)
+[LinkedIn](https://www.linkedin.com/in/ekaterinaselezneva-hr/) · [Contact](mailto:selezneva@gmail.com)
 
 ---
 
