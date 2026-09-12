@@ -154,11 +154,11 @@ Open an issue or submit a pull request.
 
 ## About
 
-Created by **Ekaterina Selezneva**, Head of Talent Acquisition at a humanoid robotics company (London, UK).
+Created by **Kathrin Selezneva**, Lead of Talent Acquisition at a humanoid robotics company (London, UK).
 
 Built during the process of scaling a robotics team from 0 to 200 engineers across UK, US, and Canada — after discovering that every existing tool failed to evaluate the profiles we needed.
 
-[LinkedIn](https://linkedin.com/in/your-profile) · [Contact](mailto:your@email.com)
+[LinkedIn](https://www.linkedin.com/in/ekaterinaselezneva-hr/) · [Contact](mailto:seleznevaem@gmail.com)
 
 ---
 
