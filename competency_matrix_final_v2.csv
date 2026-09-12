@@ -1,0 +1,73 @@
+Domain,Competency,Teleoperation SW (VR),Teleoperation Controls & Haptics,RL Eng Locomanipulation,Sim & Control Eng,Senior RL (VLA),VLA Pre-Training Eng,Sim Eng (Manip),Manip Capability Engineer,Staff Control SW Eng
+,,★ = Must-have · 0=not required · 1=Aware · 2=Practitioner · 3=Expert,,,,,,,,
+D1 · RL Core,Policy optimization (PPO/SAC) — practical application,0,0,2,1,3★,1,2,2,0
+D1 · RL Core,Reward function design & reward hacking,0,0,2★,1,2,1,3★,2★,0
+D1 · RL Core,Curriculum & observation space design,0,0,2★,1,2,1,2★,1,0
+D1 · RL Core,Imitation learning / BC / DAgger / AMP,0,0,2★,1,3★,2,1,3★,0
+D1 · RL Core,Distributed training (DDP/FSDP/DeepSpeed),0,0,0,0,3★,3★,1,0,0
+D1 · RL Core,RL fundamentals depth (GAE / surrogate loss / theory),0,0,1,0,2,1,1,1,0
+D2 · Simulation,Isaac Lab / Isaac Sim (industrial production use),0,0,2,2★,1,0,2★,0,0
+D2 · Simulation,MuJoCo / PyBullet / Drake,0,0,2,2★,1,0,3★,0,0
+D2 · Simulation,Physics solver understanding (internals & tradeoffs),0,0,1,2,0,0,3★,0,0
+D2 · Simulation,URDF / robot description formats,0,0,1,3★,0,0,1,0,1
+D2 · Simulation,GPU-parallel simulation & throughput,0,0,1,2,2,3★,2★,0,0
+D2 · Simulation,Domain randomization & sim-to-real,0,0,3★,2,2,1,3★,1,1
+D2 · Simulation,Physics setup (contact/friction/mass/joints/stiffness),0,0,2,3★,1,0,3★,1,1
+D2 · Simulation,Timing concepts (sim-to-real timing mismatch),0,0,2,2,1,0,3★,0,2
+D2 · Simulation,CI/validation/testing for simulation,0,0,1,1,1,2★,2★,0,2
+D3 · Locomotion,Legged / humanoid locomotion (end-to-end pipeline),0,0,3★,2,1,0,1,0,1
+D3 · Locomotion,Dynamic balance & recovery,0,0,3★,2,1,0,0,0,1
+D3 · Locomotion,Robot kinematics & dynamics (IK/FK/floating-base),1,3★,2,3★,1,0,1,2,2
+D3 · Locomotion,Whole-body control (WBC / QP / task prioritization),0,1,2★,2,1,0,0,0,2
+D3 · Locomotion,Real hardware deployment (legged/dynamic systems),0,0,3★,2,0,0,0,0,2★
+D4 · Manipulation,Dexterous grasping & contact-rich manipulation,0,0,1,1,1,1,3★,1,0
+D4 · Manipulation,In-hand manipulation,0,0,1,1,1,1,2,1,0
+D4 · Manipulation,Deformable / complex object handling,0,0,1,0,0,0,2,1,0
+D5 · Locomanipulation,Combined loco+manip policy,0,0,1,2,1,0,2,1,1
+D5 · Locomanipulation,Multi-behavior policy learning,0,0,2,1,2,2,1,2,0
+D6 · Perception & VLA,Vision-Language-Action models (VLA) — awareness,0,0,1,0,3★,3★,0,1,0
+D6 · Perception & VLA,Multimodal transformer architecture,0,0,0,0,3★,3★,0,1,0
+D6 · Perception & VLA,Transformer implementation depth (formulas/shapes/numerical stability),0,0,0,0,3★,3★,0,1,0
+D6 · Perception & VLA,LLM/VLM pre-training at scale,0,0,0,0,2,3★,0,1,0
+D6 · Perception & VLA,Action representation design (bins/diffusion/FM — tradeoffs),0,0,0,0,2,2,0,2★,0
+D6 · Perception & VLA,GPU memory & training efficiency (weights/activations/optimizers),0,0,0,0,3★,3★,0,1,0
+D6 · Perception & VLA,Eval design & benchmark portfolio,0,0,1,0,2,3★,1,2★,0
+D6 · Perception & VLA,Diffusion policy / FM / flow matching,0,0,0,0,2,2,0,2★,0
+D6 · Perception & VLA,Stereo vision / 3D reconstruction,2,1,0,0,1,0,0,0,0
+D7 · Control Systems,MPC / optimal control,0,2,1,2,0,0,0,0,2
+D7 · Control Systems,Impedance / force / Cartesian control,1,3★,1,2,0,0,1,1,2★
+D7 · Control Systems,Real-time control architecture (1kHz loops),3★,3★,2,2,1,0,1,0,3★
+D7 · Control Systems,Safety-critical systems & fail-safes,1,2★,1,1,0,0,0,0,2★
+D7 · Control Systems,Classical controls (PID/disturbance observer/friction comp),1,2,1,2,0,0,1,0,2★
+D7 · Control Systems,Bilateral teleoperation & force feedback,0,3★,0,0,0,0,0,0,0
+D7 · Control Systems,Passivity & stability theory,0,2★,0,0,0,0,0,0,0
+D7 · Control Systems,Actuator & system modeling (FOC/characterization/CoM),0,2★,2★,2,0,0,1,0,2★
+D8 · Software & HW,ROS2 / middleware,2,2,2,2,1,0,1,1,2
+D8 · Software & HW,C++ (modern standards),3★,3★,2,3★,2,1,2,1,3★
+D8 · Software & HW,Python + PyTorch / JAX,1,0,2,1,3★,3★,2,2,1
+D8 · Software & HW,Real-time Linux / RTOS / embedded,3★,3★,1,1,0,0,0,0,3★
+D8 · Software & HW,CI/CD / production SW practices,2,2,1,1,1,2★,2,1,3★
+D8 · Software & HW,Production systems mindset (fleet-scale / A/B testing),0,0,0,0,0,0,0,0,3★
+D9 · Teleoperation,Teleoperation system architecture (tracking+retargeting+feedback),3★,3★,0,0,0,0,0,1,0
+D9 · Teleoperation,Retargeting strategies (absolute/relative/user calibration),3★,2★,0,0,0,0,0,0,0
+D9 · Teleoperation,Motion capture devices (optical/inside-out/gloves/suits),3★,2,0,0,0,0,0,0,0
+D9 · Teleoperation,Real-world teleoperation deployment,3★,3★,0,0,0,0,0,0,0
+D9 · Teleoperation,Haptic feedback systems (vibrotactile/force/visual),2★,3★,0,0,0,0,0,0,0
+D9 · Teleoperation,Safety (watchdogs/heartbeats/dropout handling),2★,2★,0,0,0,0,0,0,0
+D9 · Teleoperation,Latency sources & budgets,2★,2★,0,0,0,0,0,0,0
+D9 · Teleoperation,VR development (Unity/OpenXR/rendering loop),3★,1,0,0,0,0,0,0,0
+D9 · Teleoperation,Low-latency video streaming (WebRTC/wireless),3★,1,0,0,0,0,0,0,0
+D9 · Teleoperation,Operator UX & scalability,2,2,0,0,0,0,0,1,0
+D9 · Teleoperation,F/T sensing & haptic devices (Sigma.7 etc),0,2★,0,0,0,0,0,0,0
+D9 · Teleoperation,Data collection & annotation pipelines,2★,1,1,1,1,1,1,3★,0
+D10 · Robot Learning,Action chunking & async inference (failure modes),0,0,0,0,0,0,0,3★,0
+D10 · Robot Learning,Data quality for imitation learning (sync/diversity/recovery),0,0,0,0,0,0,0,3★,0
+D10 · Robot Learning,Policy evaluation (success rate / A-B testing),0,0,0,0,0,0,0,2★,0
+D10 · Robot Learning,Rotation representations (quaternions/rot6d/anti-podal),0,0,0,0,0,0,0,2,0
+D10 · Robot Learning,Deployment (Jetson/ONNX/memory constraints),0,0,0,0,0,0,0,2,0
+D10 · Robot Learning,Loss debugging (normalization/data issues),0,0,0,0,0,0,0,2,0
+D11 · Research & Collab,Publications (CoRL/RSS/ICRA/NeurIPS),0,0,1,1,2,2,2,1,0
+D11 · Research & Collab,Experiment design & ablations,0,1,2,2,2,3★,2★,2★,1
+D11 · Research & Collab,HW↔SW cross-team collaboration,2,2,2,3★,1,1,2,2,3★
+D11 · Research & Collab,Technical leadership & mentorship,0,0,0,0,0,0,0,0,3★
+D11 · Research & Collab,Iterative user testing & prototyping,1,3★,0,0,0,0,0,1,0
