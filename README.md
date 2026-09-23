@@ -2,7 +2,7 @@
 
 **An open competency standard for hiring engineers in humanoid and mobile robotics.**
 
-Built by a talent practitioner who conducted 200+ technical interviews across UK, US, and Canada — and calibrated against real interview feedback, hiring decisions, and hiring manager input.
+Built by a talent practitioner who conducted 1000+ technical interviews across UK, US, and Canada — and calibrated against real interview feedback, hiring decisions, and hiring manager input.
 
 ---
 
