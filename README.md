@@ -64,7 +64,7 @@ This is not theoretical job architecture. Every competency level and must-have t
 
 ---
 
-## Key insights from 200+ interviews
+## Key insights from 1000+ interviews
 
 **1. Academic profile is not a predictor of success**
 A PhD candidate with ICRA/IROS/RAL publications received a Weak Hire for the RL Locomanipulation role. Two hired candidates had gaps in RL theory (GAE, surrogate loss derivation) but were hired for their real hardware deployment experience. Standard recruiting filters by academic credentials — and gets it wrong.
