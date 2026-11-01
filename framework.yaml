@@ -1,0 +1,777 @@
+# Robotics Competency Framework — single source of truth
+#
+# Edit THIS file. competency_matrix.csv and framework.json are generated from it:
+#     python tools/build.py
+#
+# Roles list only non-zero requirements (missing competency = level 0).
+#   must_have      ★ stop-factors: candidate below level 2 = disqualifying gap
+#   ideal_profile  ◆ marks an ideal candidate; absence does not disqualify
+# interview_gates apply to every role and are assessed in interviews, not from CVs.
+# License: CC BY 4.0
+
+schema_version: 2
+framework:
+  name: Robotics Competency Framework
+  version: 1.3.0
+  license: CC-BY-4.0
+  url: https://github.com/KathrinSel/robotics-competency-framework
+levels:
+  0: Not required — not relevant for this role
+  1: Aware — understands the concept, no hands-on experience
+  2: Practitioner — has applied it in at least one real project
+  3: Expert — leads, defines, and advances the field
+requirement_tiers:
+  must_have: '★ Stop-factor: a candidate below level 2 is a disqualifying gap regardless of overall profile strength.
+    In the interview data, these separated hire from no-hire.'
+  ideal_profile: ◆ Marks an ideal candidate. Absence does not disqualify — the candidate stays in the process —
+    but presence makes the case stronger. In the interview data, these separated Strong Yes from Yes.
+  level_only: Expected depth without special status.
+calibration_statuses:
+  interview_calibrated: Levels checked against real interview feedback, including hires or offers.
+  partially_calibrated: Derived from interview feedback, but no hire in this exact profile yet.
+  rejections_only: Based only on rejected candidates — shows what is insufficient, not what is sufficient.
+  jd_only: Based on the job description only — not yet checked against interviews.
+  jd_and_hm_input: Based on the job description plus the hiring manager's description of the role — not yet checked
+    against interviews.
+calibration_note: Role calibration uses specialization-interview feedback. In the source company most candidates
+  are rejected earlier, at the coding round, or later, at system design. Those two stages are captured as interview
+  gates, not as role competencies.
+interview_gates:
+  applies_to: all roles
+  required_level: 2
+  gates:
+  - algorithmic_coding
+  - system_design
+  note: Gates cannot be assessed from a CV. Screening tools should look for indirect signals (e.g. end-to-end system
+    ownership) and raise questions, not reject.
+domains:
+- id: rl_core
+  code: D1
+  name: RL Core
+- id: simulation
+  code: D2
+  name: Simulation
+- id: locomotion
+  code: D3
+  name: Locomotion
+- id: manipulation
+  code: D4
+  name: Manipulation
+- id: locomanipulation
+  code: D5
+  name: Locomanipulation
+- id: perception_vla
+  code: D6
+  name: Perception & VLA
+- id: control_systems
+  code: D7
+  name: Control Systems
+- id: software_hardware
+  code: D8
+  name: Software & HW
+- id: teleoperation
+  code: D9
+  name: Teleoperation
+- id: robot_learning
+  code: D10
+  name: Robot Learning
+- id: research_collaboration
+  code: D11
+  name: Research & Collab
+- id: interview_gates
+  code: G
+  name: Interview gates (all roles)
+competencies:
+- id: policy_optimization
+  name: Policy optimization (PPO/SAC) — practical application
+  domain: rl_core
+- id: reward_design
+  name: Reward function design & reward hacking
+  domain: rl_core
+- id: curriculum_design
+  name: Curriculum & observation space design
+  domain: rl_core
+- id: imitation_learning
+  name: Imitation learning / BC / DAgger / AMP
+  domain: rl_core
+- id: distributed_training
+  name: Distributed training (DDP/FSDP/DeepSpeed)
+  domain: rl_core
+- id: rl_fundamentals_depth
+  name: RL fundamentals depth (GAE / surrogate loss / theory)
+  domain: rl_core
+- id: isaac_lab
+  name: Isaac Lab / Isaac Sim (industrial production use)
+  domain: simulation
+- id: mujoco
+  name: MuJoCo / PyBullet / Drake
+  domain: simulation
+- id: physics_solver_understanding
+  name: Physics solver understanding (internals & tradeoffs)
+  domain: simulation
+- id: urdf
+  name: URDF / robot description formats
+  domain: simulation
+- id: gpu_parallel_simulation
+  name: GPU-parallel simulation & throughput
+  domain: simulation
+- id: sim_to_real
+  name: Domain randomization & sim-to-real
+  domain: simulation
+- id: physics_setup
+  name: Physics setup (contact/friction/mass/joints/stiffness)
+  domain: simulation
+- id: timing_concepts
+  name: Timing concepts (sim-to-real timing mismatch)
+  domain: simulation
+- id: simulation_ci
+  name: CI/validation/testing for simulation
+  domain: simulation
+- id: legged_humanoid_locomotion
+  name: Legged / humanoid locomotion (end-to-end pipeline)
+  domain: locomotion
+- id: dynamic_balance
+  name: Dynamic balance & recovery
+  domain: locomotion
+- id: robot_kinematics_and_dynamics
+  name: Robot kinematics & dynamics (IK/FK/floating-base)
+  domain: locomotion
+- id: whole_body_control
+  name: Whole-body control (WBC / QP / task prioritization)
+  domain: locomotion
+- id: dexterous_grasping
+  name: Dexterous grasping & contact-rich manipulation
+  domain: manipulation
+- id: in_hand_manipulation
+  name: In-hand manipulation
+  domain: manipulation
+- id: deformable_objects
+  name: Deformable / complex object handling
+  domain: manipulation
+- id: locomanipulation_policy
+  name: Combined loco+manip policy
+  domain: locomanipulation
+- id: multi_behavior_policy_learning
+  name: Multi-behavior policy learning
+  domain: locomanipulation
+- id: vla_models
+  name: Vision-Language-Action models (VLA) — hands-on experience
+  domain: perception_vla
+- id: robotics_domain_for_vla
+  name: Robotics domain understanding (how VLA works in robotics context)
+  domain: perception_vla
+  description: 'Understands how VLA models are used on robots: embodiment, action spaces, deployment constraints.
+    Ideal, but strong ML engineers without it are still considered.'
+- id: multimodal_transformer_architecture
+  name: Multimodal transformer architecture
+  domain: perception_vla
+- id: transformer_implementation_depth
+  name: Transformer implementation depth (formulas/shapes/numerical stability)
+  domain: perception_vla
+- id: large_scale_training
+  name: Large-scale model training from scratch (LLM / VLM / vision / world models)
+  domain: perception_vla
+  description: 'Has trained models from scratch on large data and compute, not only fine-tuned existing models or
+    built agentic applications around them. Scale is about the training run, not model type: a large recommendation-system
+    model trained from scratch counts.'
+- id: action_representation_design
+  name: Action representation design (bins/diffusion/FM — tradeoffs)
+  domain: perception_vla
+- id: gpu_memory_efficiency
+  name: GPU memory & training efficiency (weights/activations/optimizers)
+  domain: perception_vla
+- id: eval_design
+  name: Eval design & benchmark portfolio
+  domain: perception_vla
+- id: diffusion_flow_matching
+  name: Diffusion policy / FM / flow matching
+  domain: perception_vla
+- id: stereo_vision
+  name: Stereo vision / 3D reconstruction
+  domain: perception_vla
+- id: mpc
+  name: MPC / optimal control
+  domain: control_systems
+- id: impedance_force_control
+  name: Impedance / force / Cartesian control
+  domain: control_systems
+- id: realtime_control_architecture
+  name: Real-time control architecture (1kHz loops)
+  domain: control_systems
+- id: safety_critical_systems
+  name: Safety-critical systems & fail-safes
+  domain: control_systems
+- id: classical_controls
+  name: Classical controls (PID/disturbance observer/friction comp)
+  domain: control_systems
+- id: bilateral_teleoperation
+  name: Bilateral teleoperation & force feedback
+  domain: control_systems
+- id: passivity_stability
+  name: Passivity & stability theory
+  domain: control_systems
+- id: actuator_modeling
+  name: Actuator & system modeling (FOC/characterization/CoM)
+  domain: control_systems
+- id: ros2
+  name: ROS2 / middleware
+  domain: software_hardware
+- id: cpp
+  name: C++ (modern standards)
+  domain: software_hardware
+- id: python_pytorch_jax
+  name: Python + PyTorch / JAX
+  domain: software_hardware
+- id: realtime_linux
+  name: Real-time Linux / RTOS / embedded
+  domain: software_hardware
+- id: ci_cd
+  name: CI/CD / production SW practices
+  domain: software_hardware
+- id: production_systems_mindset
+  name: Production systems mindset (fleet-scale / A/B testing)
+  domain: software_hardware
+- id: real_hardware_deployment
+  name: Real hardware deployment (policies or controllers running on physical robots)
+  domain: software_hardware
+  description: 'Proof of life on real robots: deployed, debugged and iterated on physical hardware, as close to
+    production as possible. Simulation-only work does not count.'
+- id: teleop_architecture
+  name: Teleoperation system architecture (tracking+retargeting+feedback)
+  domain: teleoperation
+- id: retargeting
+  name: Retargeting strategies (absolute/relative/user calibration)
+  domain: teleoperation
+- id: motion_capture_devices
+  name: Motion capture devices (optical/inside-out/gloves/suits)
+  domain: teleoperation
+- id: teleop_deployment
+  name: Real-world teleoperation deployment
+  domain: teleoperation
+- id: haptic_feedback
+  name: Haptic feedback systems (vibrotactile/force/visual)
+  domain: teleoperation
+- id: teleop_safety
+  name: Safety (watchdogs/heartbeats/dropout handling)
+  domain: teleoperation
+- id: latency_budgets
+  name: Latency sources & budgets
+  domain: teleoperation
+- id: vr_development
+  name: VR development (Unity/OpenXR/rendering loop)
+  domain: teleoperation
+- id: video_streaming
+  name: Low-latency video streaming (WebRTC/wireless)
+  domain: teleoperation
+- id: operator_ux
+  name: Operator UX & scalability
+  domain: teleoperation
+- id: force_torque_sensing
+  name: F/T sensing & haptic devices (Sigma.7 etc)
+  domain: teleoperation
+- id: data_collection_pipelines
+  name: Data collection & annotation pipelines
+  domain: teleoperation
+- id: action_chunking
+  name: Action chunking & async inference (failure modes)
+  domain: robot_learning
+- id: il_data_quality
+  name: Data quality for imitation learning (sync/diversity/recovery)
+  domain: robot_learning
+- id: policy_evaluation
+  name: Policy evaluation (success rate / A-B testing)
+  domain: robot_learning
+- id: rotation_representations
+  name: Rotation representations (quaternions/rot6d/anti-podal)
+  domain: robot_learning
+- id: edge_deployment
+  name: Deployment (Jetson/ONNX/memory constraints)
+  domain: robot_learning
+- id: loss_debugging
+  name: Loss debugging (normalization/data issues)
+  domain: robot_learning
+- id: publications
+  name: Publications (CoRL/RSS/ICRA/NeurIPS)
+  domain: research_collaboration
+- id: experiment_design
+  name: Experiment design & ablations
+  domain: research_collaboration
+- id: hw_sw_collaboration
+  name: HW↔SW cross-team collaboration
+  domain: research_collaboration
+- id: technical_leadership
+  name: Technical leadership & mentorship
+  domain: research_collaboration
+- id: user_testing
+  name: Iterative user testing & prototyping
+  domain: research_collaboration
+- id: algorithmic_coding
+  name: Algorithmic coding (LeetCode-style problem solving)
+  domain: interview_gates
+  assessed_in: interview
+  description: First interview round for every role and the most common reason candidates are rejected.
+- id: system_design
+  name: System design & technical execution (end-to-end design, trade-offs, driving the discussion)
+  domain: interview_gates
+  assessed_in: interview
+  description: Designs a system end to end — for robotics usually from data and training to deployment on the robot
+    — justifies trade-offs, and drives the discussion proactively. The most common rejection after coding is passive
+    engagement here, not weak design. This stage also determines the seniority level offered.
+roles:
+- id: teleop_sw_vr
+  name: Teleoperation SW Engineer (VR)
+  calibration:
+    status: interview_calibrated
+    basis: Interview feedback on 4 teleoperation candidates, incl. 1 offer.
+  key_insight: Retargeting (absolute vs relative, user calibration) was the most common failure point. Production
+    teleoperation experience from autonomous vehicles was accepted as a valid background. No candidate fully covered
+    both the VR/streaming half and the controls/haptics half of teleoperation.
+  must_have:
+  - teleop_architecture
+  - retargeting
+  - motion_capture_devices
+  - teleop_deployment
+  ideal_profile:
+  - vr_development
+  - video_streaming
+  requirements:
+    robot_kinematics_and_dynamics: 1
+    stereo_vision: 2
+    impedance_force_control: 1
+    realtime_control_architecture: 3
+    safety_critical_systems: 1
+    classical_controls: 1
+    ros2: 2
+    cpp: 3
+    python_pytorch_jax: 1
+    realtime_linux: 3
+    ci_cd: 2
+    teleop_architecture: 3
+    retargeting: 3
+    motion_capture_devices: 3
+    teleop_deployment: 3
+    haptic_feedback: 2
+    teleop_safety: 2
+    latency_budgets: 2
+    vr_development: 3
+    video_streaming: 3
+    operator_ux: 2
+    data_collection_pipelines: 2
+    hw_sw_collaboration: 2
+    user_testing: 1
+- id: teleop_controls_haptics
+  name: Teleoperation Engineer (Controls & Haptics)
+  calibration:
+    status: partially_calibrated
+    basis: Derived from the same 4 teleoperation candidates; split out after an interviewer recommended a separate
+      opening for the controls/haptics half. No hire in this specific profile yet.
+  key_insight: Core is bilateral control, haptics, passivity and real-time engineering. VR development and wireless
+    streaming are not expected.
+  must_have:
+  - bilateral_teleoperation
+  - haptic_feedback
+  - realtime_control_architecture
+  - robot_kinematics_and_dynamics
+  ideal_profile:
+  - passivity_stability
+  - force_torque_sensing
+  requirements:
+    robot_kinematics_and_dynamics: 3
+    whole_body_control: 1
+    stereo_vision: 1
+    mpc: 2
+    impedance_force_control: 3
+    realtime_control_architecture: 3
+    safety_critical_systems: 2
+    classical_controls: 2
+    bilateral_teleoperation: 3
+    passivity_stability: 2
+    actuator_modeling: 2
+    ros2: 2
+    cpp: 3
+    realtime_linux: 3
+    ci_cd: 2
+    teleop_architecture: 3
+    retargeting: 2
+    motion_capture_devices: 2
+    teleop_deployment: 3
+    haptic_feedback: 3
+    teleop_safety: 2
+    latency_budgets: 2
+    vr_development: 1
+    video_streaming: 1
+    operator_ux: 2
+    force_torque_sensing: 2
+    data_collection_pipelines: 1
+    experiment_design: 1
+    hw_sw_collaboration: 2
+    user_testing: 1
+- id: rl_locomanipulation
+  name: RL Engineer — Locomanipulation
+  calibration:
+    status: interview_calibrated
+    basis: Interview feedback on 7 candidates (9 feedback forms), incl. 2 offers.
+  key_insight: 'Real hardware deployment on legged/dynamic systems is the primary filter: a PhD candidate with ICRA/IROS
+    publications but no hardware deployment was not hired. Both candidates who received offers had gaps in RL theory
+    (GAE, surrogate loss). Despite the title, combined loco+manipulation was not tested separately in any reviewed
+    interview.'
+  must_have:
+  - real_hardware_deployment
+  - legged_humanoid_locomotion
+  - sim_to_real
+  ideal_profile:
+  - actuator_modeling
+  - whole_body_control
+  - imitation_learning
+  requirements:
+    policy_optimization: 2
+    reward_design: 2
+    curriculum_design: 2
+    imitation_learning: 2
+    rl_fundamentals_depth: 1
+    isaac_lab: 2
+    mujoco: 2
+    physics_solver_understanding: 1
+    urdf: 1
+    gpu_parallel_simulation: 1
+    sim_to_real: 3
+    physics_setup: 2
+    timing_concepts: 2
+    simulation_ci: 1
+    legged_humanoid_locomotion: 3
+    dynamic_balance: 3
+    robot_kinematics_and_dynamics: 2
+    whole_body_control: 2
+    real_hardware_deployment: 3
+    dexterous_grasping: 1
+    in_hand_manipulation: 1
+    deformable_objects: 1
+    locomanipulation_policy: 1
+    multi_behavior_policy_learning: 2
+    vla_models: 1
+    eval_design: 1
+    mpc: 1
+    impedance_force_control: 1
+    realtime_control_architecture: 2
+    safety_critical_systems: 1
+    classical_controls: 1
+    actuator_modeling: 2
+    ros2: 2
+    cpp: 2
+    python_pytorch_jax: 2
+    realtime_linux: 1
+    ci_cd: 1
+    data_collection_pipelines: 1
+    publications: 1
+    experiment_design: 2
+    hw_sw_collaboration: 2
+- id: sim_control_engineer
+  name: Robotics Sim & Control Engineer
+  calibration:
+    status: jd_only
+    basis: Job description only — no interview feedback reviewed yet.
+  key_insight: Uses simulation and RL to drive hardware design decisions (actuator sizing, joint placement, sensor
+    layout) and owns the canonical URDF models.
+  must_have:
+  - robot_kinematics_and_dynamics
+  - urdf
+  - physics_setup
+  ideal_profile:
+  - legged_humanoid_locomotion
+  - whole_body_control
+  requirements:
+    policy_optimization: 2
+    reward_design: 1
+    curriculum_design: 1
+    imitation_learning: 1
+    isaac_lab: 2
+    mujoco: 2
+    physics_solver_understanding: 2
+    urdf: 3
+    gpu_parallel_simulation: 2
+    sim_to_real: 2
+    physics_setup: 3
+    timing_concepts: 2
+    simulation_ci: 1
+    legged_humanoid_locomotion: 2
+    dynamic_balance: 2
+    robot_kinematics_and_dynamics: 3
+    whole_body_control: 2
+    real_hardware_deployment: 2
+    dexterous_grasping: 1
+    in_hand_manipulation: 1
+    locomanipulation_policy: 2
+    multi_behavior_policy_learning: 1
+    mpc: 2
+    impedance_force_control: 2
+    realtime_control_architecture: 2
+    safety_critical_systems: 1
+    classical_controls: 2
+    actuator_modeling: 2
+    ros2: 2
+    cpp: 3
+    python_pytorch_jax: 1
+    realtime_linux: 1
+    ci_cd: 1
+    data_collection_pipelines: 1
+    publications: 1
+    experiment_design: 2
+    hw_sw_collaboration: 3
+- id: senior_rl_vla
+  name: Senior RL Engineer (VLA)
+  calibration:
+    status: jd_and_hm_input
+    basis: Job description plus the hiring manager's description of the RL track (robotics experience not required).
+      Not yet checked against interviews.
+  key_insight: Intersection of deep RL (implementing algorithms from scratch), transformer architecture modification,
+    and large-scale distributed training.
+  must_have:
+  - policy_optimization
+  - transformer_implementation_depth
+  - distributed_training
+  ideal_profile:
+  - robotics_domain_for_vla
+  requirements:
+    policy_optimization: 3
+    reward_design: 2
+    curriculum_design: 2
+    imitation_learning: 3
+    distributed_training: 3
+    rl_fundamentals_depth: 2
+    isaac_lab: 1
+    mujoco: 1
+    gpu_parallel_simulation: 2
+    sim_to_real: 2
+    physics_setup: 1
+    timing_concepts: 1
+    simulation_ci: 1
+    legged_humanoid_locomotion: 1
+    dynamic_balance: 1
+    robot_kinematics_and_dynamics: 1
+    whole_body_control: 1
+    dexterous_grasping: 1
+    in_hand_manipulation: 1
+    locomanipulation_policy: 1
+    multi_behavior_policy_learning: 2
+    vla_models: 3
+    robotics_domain_for_vla: 2
+    multimodal_transformer_architecture: 3
+    transformer_implementation_depth: 3
+    action_representation_design: 2
+    gpu_memory_efficiency: 3
+    eval_design: 2
+    diffusion_flow_matching: 2
+    stereo_vision: 1
+    realtime_control_architecture: 1
+    ros2: 1
+    cpp: 2
+    python_pytorch_jax: 3
+    ci_cd: 1
+    data_collection_pipelines: 1
+    publications: 1
+    experiment_design: 2
+    hw_sw_collaboration: 1
+    large_scale_training: 2
+- id: vla_pretraining
+  name: VLA Pre-Training Engineer
+  calibration:
+    status: interview_calibrated
+    basis: Interview feedback on 5 candidates, incl. 1 hire, plus hiring manager input on the ideal profile and
+      a hiring-manager briefing to an external recruiting partner.
+  notes: The world-model job posting is the same position as VLA pre-training.
+  key_insight: 'Primarily a deep learning role. Filters: transformer implementation depth, GPU training efficiency,
+    and having actually trained large models from scratch — not agentic development or a few hours of fine-tuning.
+    The hire came from recommendation systems, not robotics. Robotics and hands-on VLA experience define the ideal
+    candidate, but strong ML engineers without them are still considered.'
+  must_have:
+  - transformer_implementation_depth
+  - gpu_memory_efficiency
+  - distributed_training
+  - large_scale_training
+  ideal_profile:
+  - robotics_domain_for_vla
+  - vla_models
+  requirements:
+    policy_optimization: 1
+    reward_design: 1
+    curriculum_design: 1
+    imitation_learning: 2
+    distributed_training: 3
+    rl_fundamentals_depth: 2
+    sim_to_real: 1
+    dexterous_grasping: 1
+    in_hand_manipulation: 1
+    multi_behavior_policy_learning: 2
+    vla_models: 2
+    robotics_domain_for_vla: 2
+    multimodal_transformer_architecture: 3
+    transformer_implementation_depth: 3
+    action_representation_design: 2
+    gpu_memory_efficiency: 3
+    eval_design: 1
+    diffusion_flow_matching: 2
+    cpp: 1
+    python_pytorch_jax: 3
+    ci_cd: 2
+    data_collection_pipelines: 1
+    publications: 1
+    experiment_design: 3
+    hw_sw_collaboration: 1
+    large_scale_training: 3
+- id: sim_engineer_manipulation
+  name: Simulation Engineer — Manipulation
+  calibration:
+    status: rejections_only
+    basis: Interview feedback on 3 rejected candidates; the search was closed without a hire. Shows what is insufficient,
+      not what is sufficient.
+  search_status: closed
+  key_insight: 'Personal or learning simulation projects were insufficient. Common gaps: physics solver internals,
+    sim-to-real timing, controller modeling, and production simulation infrastructure (CI, validation).'
+  must_have:
+  - physics_solver_understanding
+  - timing_concepts
+  - sim_to_real
+  - simulation_ci
+  ideal_profile:
+  - dexterous_grasping
+  - reward_design
+  requirements:
+    policy_optimization: 2
+    reward_design: 2
+    curriculum_design: 2
+    imitation_learning: 1
+    distributed_training: 1
+    rl_fundamentals_depth: 1
+    isaac_lab: 2
+    mujoco: 2
+    physics_solver_understanding: 3
+    urdf: 1
+    gpu_parallel_simulation: 2
+    sim_to_real: 3
+    physics_setup: 3
+    timing_concepts: 3
+    simulation_ci: 2
+    legged_humanoid_locomotion: 1
+    robot_kinematics_and_dynamics: 1
+    dexterous_grasping: 2
+    in_hand_manipulation: 2
+    deformable_objects: 2
+    locomanipulation_policy: 2
+    multi_behavior_policy_learning: 1
+    eval_design: 1
+    impedance_force_control: 1
+    realtime_control_architecture: 1
+    classical_controls: 1
+    actuator_modeling: 1
+    ros2: 1
+    cpp: 2
+    python_pytorch_jax: 2
+    ci_cd: 2
+    data_collection_pipelines: 1
+    publications: 1
+    experiment_design: 2
+    hw_sw_collaboration: 2
+- id: robot_learning_engineer
+  name: Robot Learning Engineer
+  calibration:
+    status: interview_calibrated
+    basis: Interview feedback on 5 candidates, incl. 1 offer, plus the hiring manager's role brief and a briefing
+      to an external recruiting partner.
+  key_insight: 'Two must-haves per hiring manager: hands-on imitation learning for manipulation, and proof of life
+    on real robots as close to production as possible. RL is being integrated into the team''s policy work, so applied
+    RL marks the ideal candidate. Results first — not a research role. Keyword matching fails: candidates who knew
+    every term still failed; the filter is reasoning about failure modes, e.g. async action chunking under distribution
+    shift. Academic candidates (post-docs, PhDs about to finish) are considered with the same real-robot requirement.'
+  must_have:
+  - real_hardware_deployment
+  - imitation_learning
+  - action_chunking
+  ideal_profile:
+  - policy_optimization
+  - locomanipulation_policy
+  requirements:
+    policy_optimization: 2
+    reward_design: 2
+    curriculum_design: 1
+    imitation_learning: 3
+    rl_fundamentals_depth: 1
+    sim_to_real: 1
+    physics_setup: 1
+    robot_kinematics_and_dynamics: 2
+    dexterous_grasping: 1
+    in_hand_manipulation: 1
+    deformable_objects: 1
+    locomanipulation_policy: 2
+    multi_behavior_policy_learning: 2
+    vla_models: 1
+    robotics_domain_for_vla: 1
+    multimodal_transformer_architecture: 1
+    transformer_implementation_depth: 1
+    action_representation_design: 2
+    gpu_memory_efficiency: 1
+    eval_design: 2
+    diffusion_flow_matching: 2
+    impedance_force_control: 1
+    ros2: 1
+    cpp: 1
+    python_pytorch_jax: 2
+    ci_cd: 1
+    teleop_architecture: 1
+    operator_ux: 1
+    data_collection_pipelines: 3
+    action_chunking: 3
+    il_data_quality: 3
+    policy_evaluation: 2
+    rotation_representations: 2
+    edge_deployment: 2
+    loss_debugging: 2
+    publications: 1
+    experiment_design: 1
+    hw_sw_collaboration: 2
+    user_testing: 1
+    large_scale_training: 1
+    real_hardware_deployment: 3
+- id: staff_control_sw
+  name: Staff Control SW Engineer
+  calibration:
+    status: interview_calibrated
+    basis: Interview feedback on 2 candidates (4 feedback forms), incl. 1 offer.
+  key_insight: 'Production ownership outweighed robotics theory depth: the candidate who received the offer had
+    gaps in IK, WBC and inverse dynamics but owned fleet-scale controls in production. The candidate with the strongest
+    control theory was judged a better fit for an R&D whole-body control role. Interviewers split on both candidates
+    — align the panel on stop-factors first.'
+  must_have:
+  - production_systems_mindset
+  - real_hardware_deployment
+  - realtime_control_architecture
+  - cpp
+  ideal_profile:
+  - whole_body_control
+  - robot_kinematics_and_dynamics
+  requirements:
+    urdf: 1
+    sim_to_real: 1
+    physics_setup: 1
+    timing_concepts: 2
+    simulation_ci: 2
+    legged_humanoid_locomotion: 1
+    dynamic_balance: 1
+    robot_kinematics_and_dynamics: 2
+    whole_body_control: 2
+    real_hardware_deployment: 2
+    locomanipulation_policy: 1
+    mpc: 2
+    impedance_force_control: 2
+    realtime_control_architecture: 3
+    safety_critical_systems: 2
+    classical_controls: 2
+    actuator_modeling: 2
+    ros2: 2
+    cpp: 3
+    python_pytorch_jax: 1
+    realtime_linux: 3
+    ci_cd: 3
+    production_systems_mindset: 3
+    experiment_design: 1
+    hw_sw_collaboration: 3
+    technical_leadership: 3

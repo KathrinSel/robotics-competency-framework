@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this framework, please cite it as below."
+title: "Robotics Competency Framework"
+type: dataset
+version: 1.3.0
+date-released: 2026-11-01
+license: CC-BY-4.0
+authors:
+  - family-names: Selezneva
+    given-names: Kathrin
+    alias: Ekaterina Selezneva
+repository-code: "https://github.com/KathrinSel/robotics-competency-framework"
+abstract: "An open competency standard for hiring engineers in humanoid and mobile robotics, calibrated against real interview feedback and hiring decisions across 9 role profiles."
+keywords:
+  - robotics
+  - hiring
+  - competency framework
+  - talent acquisition
+  - humanoid robots

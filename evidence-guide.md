@@ -46,7 +46,7 @@ Compiled in response to [Issue #1](https://github.com/KathrinSel/robotics-compet
 ---
 
 ### Action Chunking & Async Inference
-*Primary filter for Manipulation Capability Engineer*
+*Must-have for Robot Learning Engineer*
 
 **CV — level 2 signals:**
 - "Deployed ACT / Diffusion Policy with action chunking"
@@ -173,6 +173,48 @@ Compiled in response to [Issue #1](https://github.com/KathrinSel/robotics-compet
 > "We ran interleaved A/B tests on the road — half the fleet on the current controller, half on the candidate — with a statistical stopping rule so we didn't need to wait for a fixed sample size. We also had requirements traceability from the control spec down to test cases, which was essential when we needed to justify a safety argument. The hardest part was maintaining determinism — we fixed memory allocation in the hot path and added warm-up periods so the first control cycle wasn't slower than the rest."
 
 **Red flag:** Production experience described only in terms of "it worked in deployment" with no mention of testing methodology, reliability metrics, or what happened when things went wrong.
+
+---
+
+### Large-Scale Model Training from Scratch
+*Must-have for VLA Pre-Training Engineer*
+
+The question that separates this from adjacent experience: **"Did you train the model from scratch, or adapt an existing one?"** Scale is about the training run — data and compute — not about model type. A large recommendation-system model trained from scratch on hundreds of GPUs counts; fine-tuning a 9B open-source model for a few hours does not.
+
+**CV — level 2 signals:**
+- Pre-training or from-scratch training of a model with a described scale (parameters, GPUs, data size)
+- Owned data pipeline, training loop, or checkpointing for a large run
+
+**CV — level 3 signals:**
+- Led a large run end to end: data mixture, architecture choices, training stability, evaluation
+- Debugged throughput or numerical issues on multi-node runs
+
+**Interview — level 2 answer:**
+> "We pre-trained a 1B-parameter model on 128 GPUs with FSDP. I owned the data pipeline and checkpointing."
+
+**Interview — level 3 answer:**
+> "Loss spiked around step 40k. Gradient norms showed the attention logits were blowing up in bf16, so we added QK-norm and re-ran from the last stable checkpoint. We also rebalanced the data mixture after evals showed the model overfitting to one source."
+
+**Red flag:** Years of agentic development or prompt orchestration presented as model-training experience — an abundant skill, not this one.
+
+---
+
+### System Design & Technical Execution
+*Interview gate for every role — assessed in the interview, not from the CV*
+
+Candidates are rarely rejected here for weak design. They are rejected for not engaging: waiting for the interviewer to lead, not asking about constraints, not working the problem together. This stage also determines the seniority level offered.
+
+**CV — indirect signals (raise a question, never reject on these):**
+- "Designed and shipped X end to end", with users, constraints, or production outcomes described
+- Ownership across boundaries: data → training → deployment, or software ↔ hardware
+
+**Interview — level 2 answer:**
+> Proposes a reasonable architecture once the problem is fully specified and the interviewer guides the steps.
+
+**Interview — level 3 answer:**
+> Starts by asking about users, latency budgets, and failure tolerance; proposes a design, names what would break first, and adjusts it as new constraints arrive — driving the conversation rather than following it.
+
+**Red flag:** A correct design delivered passively — the candidate answers what is asked, but never asks anything back.
 
 ---
 
