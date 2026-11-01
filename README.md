@@ -133,7 +133,7 @@ Despite the role being called "RL Locomanipulation Engineer", interviews focused
 ## Data sources
 
 This framework is based on:
-- 200+ technical interviews conducted across UK, US, and Canada (2023–2025)
+- 1000+ technical interviews conducted across UK, US, and Canada (2023–2025)
 - Real interview feedback from hiring managers and technical interviewers
 - Hiring decisions (accepted and rejected candidates) across 9 role types
 - Direct hiring manager input on role expectations and ideal candidate profiles
